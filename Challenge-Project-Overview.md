@@ -53,80 +53,112 @@ Chambers Capital Ventures is an investment and development firm operating at the
 
 ## 🎯 The Challenge
 ### Project Summary
-This project aims to build the Vault™ governance engine and integrate it with CreativeOS™ to facilitate secure, AI-driven creative workflows. By utilizing proprietary provenance logs, structured IP records, and public market demand datasets, the team will develop a hybrid ML architecture to track intellectual property rights and predict commercial streaming licensing outcomes.
+In this project, you will use proprietary provenance and interaction log data, public entertainment performance datasets (box office, audience demand signals), and creative asset metadata along with natural language processing, classification models, time-series analysis, and hybrid inference techniques to build components of Vault™ — a secure AI governance and provenance engine — and integrate them with CreativeOS™ for intelligent creative workflow management. This will help our company address the critical business problem of protecting intellectual property, maintaining verifiable chain of title, and enabling safe human-AI collaboration in the creative industries while accurately predicting commercial value (such as streaming licensing deals) in an AI-driven entertainment landscape.
 
 ### Success Criteria
-Delivery of a functional prototype of the Vault™ + CreativeOS™ secure AI ecosystem with a working proof-of-concept demonstrating secure asset upload, AI-governed interaction logging, provenance tracking, and chain-of-title maintenance. A functional Streaming Deals Prediction module that accurately projects licensing terms. Positive evaluation on technical quality, innovation, IP protection, and usability.
+Success will be measured by the delivery of a functional prototype of the Vault™ + CreativeOS™ secure AI ecosystem with the following outcomes:
+
+- A working proof-of-concept demonstrating secure asset upload, AI-governed interaction logging, provenance tracking, and chain-of-title maintenance.
+- A functional Streaming Deals Prediction module that accurately projects licensing terms using public data + MSPF audience psychology.
+- Successful integration of the HollywoodMindLayer for creative intelligence.
+- Comprehensive documentation, clean code repository, and a live demo showing secure collaboration and commercial intelligence features.
+- Positive evaluation on technical quality, innovation, IP protection mechanisms, and usability.
+
+A successful outcome is a solid foundation that clearly demonstrates the core value of secure human-AI collaboration in creative industries.
+
+### Stretch Goals
+- Stretch Goal 1: Implement a full AI-safe processing workspace with advanced access controls and real-time copyright integrity warnings.
+- Stretch Goal 2: Develop a graph database model for visualizing complex chain-of-title relationships and rights management.
+- Stretch Goal 3: Expand the Streaming Deals Prediction Engine with additional ML models and real-time trend injection capabilities.
+- Stretch Goal 4: Create a user interface prototype (web or desktop) for Vault™ and CreativeOS™ dual modes.
+- Stretch Goal 5: Research and prototype blockchain or distributed ledger integration for enhanced immutable provenance.
 
 ### Project Milestones
 Use these milestones to guide your work. Your team will create a GitHub Projects board to track tasks within each milestone.
 | Month | Milestone | Key Activities |
 |-------|-----------|----------------|
-| **September** | Data Exploration & Preprocessing | Standardizing hybrid CSV/JSON/SQL schemas and building robust cleaning pipelines for disparate IP and box office records. |
-| **October** | Feature Engineering & Baseline Modeling | Developing time-series features for market demand and applying NLP techniques to extract metadata from creative assets. |
-| **November** | Model Optimization & Evaluation | Performing hyperparameter tuning on predictive models and conducting rigorous validation against historical chain-of-title logs. |
-| **December** | Insights, Deliverables & Presentation | Finalizing the UI/UX for the proof-of-concept prototype and preparing executive reports on licensing value projections. |
+| **September** | [Title] | Complete requirements gathering, system architecture design, and core data modeling. Deliver a detailed technical specification for Vault™ (secure repository with provenance engine) and CreativeOS™ (AI orchestration layer), including the proprietary SQL schema, MSPF audience modeling, and integration points with the HollywoodMindLayer. Set up the development environment and initial Git repository. |
+| **October** | [Title] | Implement core components including the AI governance and provenance tracking engine, basic read-only secure viewing, chain-of-title functionality, and the Streaming Deals Prediction Engine prototype. Integrate the Hollywood collective intelligence layer and conduct initial testing with sample creative assets and public entertainment datasets. |
+| **November** | [Title] | Complete system integration between Vault™ and CreativeOS™, implement dual Secure/Inspire modes, add commercial intelligence features (deal prediction + audience analysis), perform end-to-end testing, and prepare documentation, a working demo, and a final report with stretch goal results. |
 
 > **Note for the team:** Please create a GitHub Projects board in this repository to break these milestones into weekly tasks. Go to the **Projects** tab → **New project** → Choose **Board** → Add columns for each month.
 
 ---
 
 ## 📊 Dataset
-**Name and Source:** Chambers Capital IP Provenance & Industry Market Data  
-**Format:** CSV, TSV, JSON, SQL, PNG/JPG  
+**Name and Source:** [TBD]   
+**Format:** [TBD]  
 **Size:** 1gb to 5gb  
-**Location:** Secure S3 bucket and encrypted database exports provided at project kickoff.  
+**Location:** [TBD]    
 
 ### Key Details
-- Proprietary provenance and interaction log data, public entertainment performance datasets (box office, audience demand signals), creative asset metadata, provenance logs, interaction metadata, and hybrid structured/unstructured IP records. Formats include CSV/TSV, JSON, Image files (.png, .jpg), and database exports (SQL dump).
-- Teams must implement strict deduplication for hybrid data sources and perform categorical encoding for unstructured IP metadata fields to ensure consistency across the prediction engine.
-
+-  [TBD]
+  
 ---
 
 ## 🛠️ Suggested Approach
-**ML Problem Type:** Classification, Regression, Time Series, NLP & RAG, Multi-Agent Systems  
+
+**ML Problem Type:** [TBD]
+
 **Recommended Libraries:**
-- Natural language processing (NLP)
-- classification models
-- time-series analysis
-- hybrid inference techniques
-- regression
-- Large Language Models (LLMs)/Generative AI
-- and Transfer Learning / Pre-trained Models.
-**Evaluation Metrics:** Precision and recall for IP provenance tracking; Mean Absolute Percentage Error (MAPE) for streaming deal predictions; system latency and security audit compliance scores.
+- [e.g., pandas, scikit-learn, TensorFlow, Hugging Face]
+
+**Evaluation Metrics:**
+- [e.g., Accuracy, Precision/Recall, RMSE, BLEU score]
 
 ---
 
 ## 📚 Resources to Get Started
+
 The following resources will help your team understand the problem space and potential technical approaches for this project:
+
 **Background Reading:**
-- Industry standards on Digital Asset Management (DAM) and blockchain-based provenance tracking.
+- [e.g., Link to an article or blog post about the problem domain]
+- [e.g., Link to an industry report or case study]
+
 **Technical Tutorials:**
-- Documentation on RAG (Retrieval-Augmented Generation) frameworks for secure data retrieval.
+- [e.g., Link to a free tutorial on the ML technique(s) involved]
+- [e.g., Link to documentation for a key library or tool]
+
 **Code Examples:**
-- Boilerplate repository for secure API integration and time-series forecasting models provided by internal partners.
+- [e.g., Link to a relevant GitHub repo]
+- [e.g., Link to a sample implementation or starter code]
+
+**Other:**
+- [Links to any additional resources — e.g., papers, videos, podcasts, etc.]
+
+*Feel free to explore beyond these, and share anything interesting you find with me!*
 
 ---
 
 ## 🤝 How We'll Work Together
-**Check-ins:** During our biweekly 60-min AI Studio Lab Section meeting block (2nd and 4th week of every month)  
-**Communication:** Slack and Corporate Email  
-**Response time:** 24-48 business hours  
-**Recommended Tools:**
-- **Coding:** Google Colab Free Tier  
-- **Collaboration:** GitHub, Notion  
-- **Virtual Meetings:** Zoom, Google Meet  
+
+**Official check-ins:** During our biweekly 45-minute AI Studio Lab Section meeting block (2nd and 4th week of every month)
+
+ **Other ways to reach out to me with questions:** 
+* [e.g., Your team's channel within Break Through Tech’s Discord space]
+* [e.g., Email; please copy your teammates and AI Studio Coach]
+* [e.g., Request a team check-in on Zoom]
+* [Note: I will aim to respond within 48 hours. Please reach out to your AI Studio Coach with urgent questions.]
+
+> 💡 **Challenge Advisor: Please update the above based on your availability and preference. If you are not able to answer questions or meet with fellows outside of the biweekly Lab Section check-ins, simply write in "N/A (only available during the official check-in times)"**
+
+**Recommended free coding / collaboration tools**
+* […]
+* […]
 
 ---
 
 ## 🚀 Getting Started
-1. **Review this overview document** and note any questions for our first meeting.
-2. **Begin reviewing the dataset** using the link provided in the Dataset section.
-3. **Read the GitHub Projects documentation** [here](https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects).
 
-I'm excited to work with you!
+1. **Review this overview document** and note any questions for our first meeting
+2. **Begin reviewing the dataset** using the link above
+3. **Read the GitHub Projects documentation** [here](https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects)
+
+I’m excited to work with you!
 
 ---
 
 ## ❓ Questions?
-Please bring any questions to our first meeting during the week of August 24th (Break Through Tech's Bridge to Studio - Session B).
+
+Please bring any questions to our first meeting during the week of August 24th (Break Through Tech’s Bridge to Studio - Session C). 
