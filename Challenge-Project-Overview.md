@@ -4,7 +4,7 @@
   **Challenge Advisor:** Maher Hasan, [m@hollywoodstudios.ai](mailto:m@hollywoodstudios.ai)  
   **Challenge Advisor:** Sir Steven Saxton, [s@hollywoodstudios.ai](mailto:s@hollywoodstudios.ai)  
   **AI Studio Coach:** Deanna DiMonte,
-  [deanna.dimonte@breakthroughtech.org](mailto:ishan.patwardhan@breakthroughtech.org)  
+  [ishan.patwardhan@breakthroughtech.org](mailto:ishan.patwardhan@breakthroughtech.org)  
   **Program:** Break Through Tech AI Studio - Fall 2026
 
   ---
