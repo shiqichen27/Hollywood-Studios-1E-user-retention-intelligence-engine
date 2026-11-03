@@ -1,121 +1,128 @@
-# AI Studio Challenge Project Title
-
-> 💡 **Note for the team:** This is just a template. Update the above title with your AI Studio Challenge Project name. Remove all guidance notes and example text in this template and populate this README with your own content. You can work on this README throughout AI Studio, and get feedback from your AI Studio Coach and Challenge Advisor before finalizing it.  
+# Hollywood Studios: User Retention Intelligence Engine
 
 ---
 
 ### 👥 **Team Members**
 
-**Example:**
-
-| Name             | GitHub Handle | Contribution                                                             |
-|------------------|---------------|--------------------------------------------------------------------------|
-| Taylor Nguyen    | @taylornguyen | Data exploration, visualization, overall project coordination            |
-| Jordan Ramirez   | @jramirez     | Data collection, exploratory data analysis (EDA), dataset documentation  |
-| Amina Hassan     | @aminahassan  | Data preprocessing, feature engineering, data validation                 |
-| Priya Mehta      | @pmehta       | Model selection, hyperparameter tuning, model training and optimization  |
-| Chris Park       | @chrispark    | Model evaluation, performance analysis, results interpretation           |
+| Name              | GitHub Handle | Contribution                                                             |
+|-------------------|---------------|--------------------------------------------------------------------------|
+| Jolaoluwa Amodu   | @the-jola-amodu    | Measure and track user interaction, created local testing                                                  |
+| Imara Zepeda   | @[handle2]    |                                                   |
+| Shiqi Chen   | @[handle3]    |                                                   |
+| Adam Walid   | @[handle4]    |                                                   |
+| Lina Romero-Fabian   | @[handle5]    |                                                   |
+| Tamara Landman   | @[handle6]    |                                                   |
 
 ---
 
 ## 🎯 **Project Highlights**
 
-**Example:**
-
-- Developed a machine learning model using `[model type/technique]` to address `[challenge project task]`.
-- Achieved `[key metric or result]`, demonstrating `[value or impact]` for `[host company]`.
-- Generated actionable insights to inform business decisions at `[host company or stakeholders]`.
-- Implemented `[specific methodology]` to address industry constraints or expectations.
+- Built an in-memory, disposable PostgreSQL-compatible database testing workflow and Neon SQL adapter layer for fast, isolated development without risking production data.
+- Implemented robust server-side authorization for the Retention Intelligence Engine, featuring session validation, strict admin allowlists, fail-closed default-deny access, and generic unauthorized UI states.
+- Enhanced admin UX with a real-time searchable member directory and direct sidebar navigation under Settings for seamless report lookup.
+- Integrated a seeded local session flow across admin, member, and peer roles, verified through API-level integration tests and browser-driven end-to-end checks.
+- Developed the foundation for user retention prediction (7/30/60/90-day active probability, churn detection, lifetime estimation) integrated within the existing Hollywood Studios application fork.
 
 ---
 
 ## 👩🏽‍💻 **Setup and Installation**
 
-**Provide step-by-step instructions so someone else can run your code and reproduce your results. Depending on your setup, include:**
+### Prerequisites
+- Node.js (v18+ recommended)
+- Git
 
-* How to clone the repository
-* How to install dependencies
-* How to set up the environment
-* How to access the dataset(s)
-* How to run the notebook or scripts
+### Instructions
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/maherhasannn/hsi/tree/retention-engine
+   ```
+
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+
+3. **Environment Setup:**
+   Create a `.env.local` file in the root directory and configure local session and database settings.
+
+4. **Run Local Disposable Database & Application:**
+   Start the application in local test mode against the in-memory database:
+   ```bash
+   npm run dev
+   ```
+
+5. **Run Integration & Verification Tests:**
+   Validate local database adapter, authorization rules, and UI access layers:
+   ```bash
+   npm run test
+   ```
 
 ---
 
 ## 🏗️ **Project Overview**
 
-**Describe:**
-
-- How this project is connected to the Break Through Tech AI Program
-- Your AI Studio host company and the project objective and scope
-- The real-world significance of the problem and the potential impact of your work
+- **Program Connection:** Developed as part of the Break Through Tech AI Program AI Studio Challenge.
+- **Host Company & Objective:** Partnered with Hollywood Studios to build a User Retention Intelligence Engine integrated into the existing application fork. The system shifts engagement analytics from static tracking to predictive modeling that forecasts user activity over 7, 30, 60, and 90 days.
+- **Real-World Impact:** Identifying early warning signs of disengagement enables targeted interventions (e.g., connection recommendations, project suggestions) that extend active user lifetime and optimize platform retention strategies.
 
 ---
 
 ## 📊 **Data Exploration**
 
-**You might consider describing the following (as applicable):**
-
-* The dataset(s) used: origin, format, size, type of data
-* Data exploration and preprocessing approaches
-* Insights from your Exploratory Data Analysis (EDA)
-* Challenges and assumptions when working with the dataset(s)
-
-**Potential visualizations to include:**
-
-* Plots, charts, heatmaps, feature visualizations, sample dataset images
+- **Dataset & Interactions:** The platform tracks behavioral events across rolling time windows (7-, 14-, 30-day metrics), covering:
+  - **Platform Activity:** Login frequency, session durations, inactivity intervals.
+  - **Networking:** Profile views, search queries, connections established, messaging volume.
+  - **Engagement:** Content interactions, projects created/joined, feature usage.
+  - **Referrals:** Outbound invites, conversion rates, and subsequent invitee retention.
+- **Preprocessing & Aggregation:** Calculated behavioral recency, frequency, and changes in activity trends over time.
+- **Challenges:** Managing non-production testing without leaking sensitive metadata led to building an isolated in-memory PostgreSQL emulator handling nested SQL fragments and dynamic parameterization.
 
 ---
 
 ## 🧠 **Model Development**
 
-**You might consider describing the following (as applicable):**
-
-* Model(s) used (e.g., CNN with transfer learning, regression models)
-* Feature selection and Hyperparameter tuning strategies
-* Training setup (e.g., % of data for training/validation, evaluation metric, baseline performance)
-
+- **Target Capabilities:**
+  1. **Behavioral Classification:** Categorizing users (e.g., frequent networkers, passive browsers, collaborators).
+  2. **Retention Prediction:** Supervised modeling for 7-, 30-, 60-, and 90-day active probabilities.
+  3. **Lifetime Estimation:** Survival analysis / time-to-event modeling to estimate remaining active days.
+  4. **Churn Detection:** Identifying trajectory drops (e.g., declining messaging frequency).
+- **Inference & Explainability Strategy:** Quantifying relative feature contributions to highlight key behaviors driving retention, powering actionable, personalized interventions.
 
 ---
 
 ## 📈 **Results & Key Findings**
 
-**You might consider describing the following (as applicable):**
-
-* Performance metrics (e.g., Accuracy, F1 score, RMSE)
-* How your model performed
-* Insights from evaluating model fairness
-
-**Potential visualizations to include:**
-
-* Confusion matrix, precision-recall curve, feature importance plot, prediction distribution, outputs from fairness or explainability tools
+- **Infrastructure & Test Safety:** Successfully deployed a fully functional local development pipeline allowing offline API testing and UI validation without impacting production data.
+- **Access Control & Privacy:** Server-side authorization prevents unauthorized access and completely hides engagement data and page metadata from non-admin accounts.
+- **Admin Workflow Efficiency:** Replaced manual user handle lookups with a searchable, live-filtered member directory for engagement report viewing.
+- **Validation Pipeline:** Clean build execution with 100% pass rate across role-based access tests, public data safety checks, and metric rendering integration tests.
 
 ---
 
 ## 🚀 **Next Steps**
 
-**You might consider addressing the following (as applicable):**
-
-* What are some of the limitations of your model?
-* What would you do differently with more time/resources?
-* What additional datasets or techniques would you explore?
+- **Model Training & Deployment:** Transition from preliminary baseline models to full supervised training and survival models as historical behavioral event volume increases.
+- **Intervention Engine:** Automate personalized in-app recommendations (relevant connections, projects, feature onboarding) based on retention model outputs.
+- **Expanded Route Coverage:** Extend the local disposable database and testing workflow to additional application routes beyond retention reporting.
+- **Automated E2E Testing:** Implement automated visual regression testing scripts (e.g., Playwright/Cypress) in the CI/CD pipeline for permission state verification.
 
 ---
 
 ## 📝 **License**
 
-Specify how your project can be used by others. Choose an appropriate license and link it here (e.g., MIT, Apache 2.0). Make sure your Challenge Advisor approves of the selected license type. 
-
-**Example:**
 This project is licensed under the MIT License.
 
 ---
 
-## 📄 **References** (Optional but encouraged)
+## 📄 **References**
 
-Cite relevant papers, articles, or resources that supported your project.
+- Hollywood Studios Project Guidance & Specifications
+- Neon SQL & PostgreSQL In-Memory Database Emulation Patterns
+- Survival Analysis for User Lifetime & Churn Prediction Literature
 
 ---
 
-## 🙏 **Acknowledgements** (Optional but encouraged)
+## 🙏 **Acknowledgements**
 
-Thank your Challenge Advisor, host company representatives, TA, and others who supported your project.
+Thank you to our Challenge Advisor, host company representatives from Hollywood Studios, TAs, and the Break Through Tech AI team for their guidance and support throughout this project.
